@@ -1,30 +1,30 @@
-// // check palindrome
-// #include<iostream>
-// #include<string>
-// using namespace std;
+// check palindrome
+#include<iostream>
+#include<string>
+using namespace std;
 
-// bool isPalindrome(string str, int start, int end) {
-//     // base case
-//     if (start >= end) {
-//         return true;
-//     }
+bool isPalindrome(string str, int start, int end) {
+    // base case
+    if (start >= end) {
+        return true;
+    }
 
-//     // not matched
-//     if (str[start] != str[end]) {
-//         return false;
-//     }
-//     // matched
-//     else {
-//         return isPalindrome(str, start + 1, end - 1);
-//     }
-// }
+    // not matched
+    if (str[start] != str[end]) {
+        return false;
+    }
+    // matched
+    else {
+        return isPalindrome(str, start + 1, end - 1);
+    }
+}
 
-// int main() {
-//     string str = "aabaa";
-//     cout << isPalindrome(str, 0, str.size() - 1);
+int main() {
+    string str = "aabaa";
+    cout << isPalindrome(str, 0, str.size() - 1);
 
-//     return 0;
-// }
+    return 0;
+}
 
 // count vowels
 // #include<iostream>
